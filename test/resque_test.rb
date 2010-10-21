@@ -229,4 +229,10 @@ context "Resque" do
   test "decode bad json" do
     assert_nil Resque.decode("{\"error\":\"Module not found \\u002\"}")
   end
+  
+  test "redis hincrby" do
+    r = Resque.redis
+    assert_equal 1, r.hincrby('test-hincrby', 'key', 1)
+    assert_equal 1, r.hget('test-hincrby', 'key').to_i
+  end
 end
