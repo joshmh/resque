@@ -2,13 +2,13 @@ $LOAD_PATH.unshift 'lib'
 require 'resque/version'
 
 Gem::Specification.new do |s|
-  s.name              = "resque"
+  s.name              = "resque-joshmh"
   s.version           = Resque::Version
   s.date              = Time.now.strftime('%Y-%m-%d')
   s.summary           = "Resque is a Redis-backed queueing system."
   s.homepage          = "http://github.com/defunkt/resque"
   s.email             = "chris@ozmm.org"
-  s.authors           = [ "Chris Wanstrath" ]
+  s.authors           = [ "Chris Wanstrath", "Josh Harvey" ]
 
   s.files             = %w( README.markdown Rakefile LICENSE HISTORY.md )
   s.files            += Dir.glob("lib/**/*")
